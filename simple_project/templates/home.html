@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+        a
+        {
+            text-decoration: none;
+            color:white;
+            border: 1px solid #04AA6D;
+            padding: 5px;
+            border-radius: 5px;
+            background-color:#04AA6D;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav
+        {
+            display: flex;
+            gap: 5%;
+            align-items: center;
+            justify-content: center;
+            background-color:#282A35;
+            padding: 20px;
+        }
+        li
+        {
+            list-style: none;
+        }
+        .content{
+        margin-left: 35%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/first_app/about">About</a></li>
+        <li><a href="/first_app/contact">Contact</a></li>
+        <li><a href="/first_app/service">Services</a></li>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Home page</h1>
+        <h1>{{lst1}}</h1>
+        <h1>1. {{lst1 | join:" - " }}</h1>
+        <h1>2. {{ date | date:"D d M Y" }}</h1>
+        <h1>Date formating: {{ date | date:"SHORT_DATE_FORMAT" }}</h1>
+        <h1>Adding file: {{12 | add:"8"}}</h1>
+        <h1>Capfirst: {{country | capfirst}}</h1>
+        <h1>Cut the space between word: {{"Nyem Haq" | cut:" "}}</h1>
+        <h1>Sorting dictionary according to name: {{d2 | dictsort:"name"}}</h1>
+        <h1>first item of the list: {{lst1 | first}}</h1>
+        <h1>last item of the list: {{lst1 | last}}</h1>
+        <h1>length of the list: {{lst1 | length}}</h1>
+        <h1>linenumbers: {{lst1 | linenumbers}}</h1>
+        <h1>Lower Case: {{name | lower}}</h1>
+        <h1>Upper Case: {{name | upper}}</h1>
+        <h1>Title: {{name | title}}</h1>
+        <h1>Random item return from a list: {{lst1 | random}}</h1>
+        <h1>Slicing item in list: {{lst1 | slice:":2"}}</h1>
+        <h1>Time: {{date | time:"H:i"}}</h1>
+        <h1>Time since: {{date | timesince}}</h1>
+        <h1>Truncate Char: {{country | truncatechars:4}}</h1>
+        <h1>Wordcount: {{name | wordcount}}</h1>
+        <h1>Truncate word: {{lst1 | truncatewords:2}}</h1>
+        <h1>Striptags: {{name | striptags}}</h1>
+        <h1>Make list from word: {{country | make_list}}</h1>
+        <h1>Summing Up a paragraph: {{details | truncatewords:"20"}}</h1>
+    </div>
+  </body>
+</html>
